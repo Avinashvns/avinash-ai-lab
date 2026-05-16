@@ -19,30 +19,6 @@ export default function DeepLearningPage() {
             🧠 Deep Learning
           </h1>
 
-          <div className="algo-card">
-
-            <h2>
-              ⚡ Perceptron
-            </h2>
-
-            <p>
-              Learn Perceptron step by step.
-            </p>
-
-          </div>
-
-          <div className="algo-card">
-
-            <h2>
-              🧠 Neural Networks
-            </h2>
-
-            <p>
-              Learn Neural Networks from scratch.
-            </p>
-
-          </div>
-
         </div>
 
       </div>
