@@ -1,65 +1,222 @@
+import Header from "@/components/Header";
+import Card from "@/components/Card";
 import Image from "next/image";
 
 export default function Home() {
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+
+    <>
+
+      <Header />
+
+      <div className="home-container">
+
+        {/* ================================================= */}
+        {/* HERO SECTION */}
+        {/* ================================================= */}
+
+        <div className="hero-section">
+
+          <div className="hero-left">
+
+            <p className="hero-badge">
+              🚀 ML • DL • NLP • GenAI • DSA Platform
+            </p>
+
+            <h1 className="main-title">
+              Avinash AI Lab
+            </h1>
+
+            <p className="sub-title">
+              Learn Artificial Intelligence, Machine Learning,
+              Deep Learning, NLP, Generative AI and DSA
+              through visual learning, coding and projects.
+            </p>
+
+            <div className="hero-buttons">
+
+              <button className="primary-btn">
+                Start Learning
+              </button>
+
+              <button className="secondary-btn">
+                Explore Projects
+              </button>
+
+            </div>
+
+          </div>
+
+          <div className="hero-right">
+
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/images/home/hero.png"
+              alt="AI"
+              width={600}
+              height={500}
+              className="hero-image"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+          </div>
+
         </div>
-      </main>
-    </div>
+
+        {/* ================================================= */}
+        {/* WHY SECTION */}
+        {/* ================================================= */}
+
+        <div className="why-section">
+
+          <div className="why-left">
+
+            <p className="section-tag">
+              WHY AVINASH AI LAB
+            </p>
+
+            <h2 className="why-title">
+              Learn AI The Practical Way
+            </h2>
+
+            <p className="why-text">
+
+              Avinash AI Lab is designed to help students and developers
+              master Artificial Intelligence, Machine Learning, Deep Learning,
+              NLP, Generative AI and DSA through practical implementation,
+              visual learning and real-world projects.
+
+            </p>
+
+          </div>
+
+          <div className="why-right">
+
+            <div className="why-card">
+
+              <h3>💡 Practical Learning</h3>
+
+              <p>
+                Build algorithms from scratch and understand the mathematics deeply.
+              </p>
+
+            </div>
+
+            <div className="why-card">
+
+              <h3>🚀 Modern AI Stack</h3>
+
+              <p>
+                Learn modern technologies like LLMs, RAG, LangChain and AI Agents.
+              </p>
+
+            </div>
+
+            <div className="why-card">
+
+              <h3>📁 Real Projects</h3>
+
+              <p>
+                Build portfolio-ready AI and Full Stack projects step by step.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* ================================================= */}
+        {/* FEATURES */}
+        {/* ================================================= */}
+
+        <div className="section-header">
+
+          <h2>
+            🚀 Learning Sections
+          </h2>
+
+          <p>
+            Everything you need to become AI Engineer.
+          </p>
+
+        </div>
+
+        <div className="card-grid">
+
+          <Card
+            title="🤖 Machine Learning"
+            description="Learn ML algorithms from scratch and with Scikit Learn."
+          />
+
+          <Card
+            title="🧠 Deep Learning"
+            description="Understand Neural Networks, CNN, RNN and Backpropagation."
+          />
+
+          <Card
+            title="💬 NLP"
+            description="Learn Natural Language Processing step by step."
+          />
+
+          <Card
+            title="🚀 Generative AI"
+            description="Master LLMs, RAG, LangChain and AI Agents."
+          />
+
+          <Card
+            title="💻 DSA"
+            description="Master Data Structures & Algorithms for interviews."
+          />
+
+          <Card
+            title="📁 Projects"
+            description="Explore real-world AI and ML projects."
+          />
+
+        </div>
+
+        {/* ================================================= */}
+        {/* STATS */}
+        {/* ================================================= */}
+
+        <div className="stats-section">
+
+          <div className="stat-card">
+
+            <h2>50+</h2>
+
+            <p>Algorithms</p>
+
+          </div>
+
+          <div className="stat-card">
+
+            <h2>20+</h2>
+
+            <p>Projects</p>
+
+          </div>
+
+          <div className="stat-card">
+
+            <h2>100%</h2>
+
+            <p>Practical Learning</p>
+
+          </div>
+
+          <div className="stat-card">
+
+            <h2>AI</h2>
+
+            <p>Focused Platform</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </>
   );
 }
