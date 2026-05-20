@@ -1,13 +1,15 @@
-export default function Card({ title, description }) {
+import Link from "next/link";
+
+export default function Card({ title, description, href }) {
 
   return (
 
-    <div className="card">
+    <Link href={href} className="card">
 
       <h2>{title}</h2>
 
       <p>{description}</p>
 
-    </div>
+    </Link>
   )
 }
