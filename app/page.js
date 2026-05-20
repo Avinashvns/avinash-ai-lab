@@ -474,106 +474,106 @@ export default function Home() {
         </div>
 
         {/* ================================================= */}
-{/* FOOTER */}
-{/* ================================================= */}
+        {/* FOOTER */}
+        {/* ================================================= */}
 
-<footer className="footer">
+        <footer className="footer">
 
-  <div className="footer-glow"></div>
+          <div className="footer-glow"></div>
 
-  <div className="footer-top">
+          <div className="footer-top">
 
-    {/* LEFT */}
+            {/* LEFT */}
 
-    <div className="footer-brand">
+            <div className="footer-brand">
 
-      <h2>
-        🚀 Avinash AI Lab
-      </h2>
+              <h2>
+                🚀 Avinash AI Lab
+              </h2>
 
-      <p>
-        Learn AI, Machine Learning, Deep Learning,
-        Generative AI and DSA through practical coding,
-        visual learning and real-world projects.
-      </p>
+              <p>
+                Learn AI, Machine Learning, Deep Learning,
+                Generative AI and DSA through practical coding,
+                visual learning and real-world projects.
+              </p>
 
-      <div className="footer-socials">
+              <div className="footer-socials">
 
-        <a href="#">
-          GitHub
-        </a>
+                <a href="#">
+                  GitHub
+                </a>
 
-        <a href="#">
-          LinkedIn
-        </a>
+                <a href="#">
+                  LinkedIn
+                </a>
 
-        <a href="#">
-          YouTube
-        </a>
+                <a href="#">
+                  YouTube
+                </a>
 
-      </div>
+              </div>
 
-    </div>
+            </div>
 
-    {/* CENTER */}
+            {/* CENTER */}
 
-    <div className="footer-column">
+            <div className="footer-column">
 
-      <h3>
-        Learning
-      </h3>
+              <h3>
+                Learning
+              </h3>
 
-      <a href="/machine-learning">
-        Machine Learning
-      </a>
+              <a href="/machine-learning">
+                Machine Learning
+              </a>
 
-      <a href="/deep-learning">
-        Deep Learning
-      </a>
+              <a href="/deep-learning">
+                Deep Learning
+              </a>
 
-      <a href="/nlp">
-        NLP
-      </a>
+              <a href="/nlp">
+                NLP
+              </a>
 
-      <a href="/generative-ai">
-        Generative AI
-      </a>
+              <a href="/generative-ai">
+                Generative AI
+              </a>
 
-    </div>
+            </div>
 
-    {/* RIGHT */}
+            {/* RIGHT */}
 
-    <div className="footer-column">
+            <div className="footer-column">
 
-      <h3>
-        More
-      </h3>
+              <h3>
+                More
+              </h3>
 
-      <a href="/projects">
-        Projects
-      </a>
+              <a href="/projects">
+                Projects
+              </a>
 
-      <a href="/portfolio">
-        Portfolio
-      </a>
+              <a href="/portfolio">
+                Portfolio
+              </a>
 
-      <a href="#">
-        Contact
-      </a>
+              <a href="#">
+                Contact
+              </a>
 
-    </div>
+            </div>
 
-  </div>
+          </div>
 
-  <div className="footer-bottom">
+          <div className="footer-bottom">
 
-    <p>
-      © 2026 Avinash AI Lab — Built with ❤️ using Next.js
-    </p>
+            <p>
+              © 2026 Avinash AI Lab — Built with ❤️ using Next.js
+            </p>
 
-  </div>
+          </div>
 
-</footer>
+        </footer>
 
 
         {/* last */}

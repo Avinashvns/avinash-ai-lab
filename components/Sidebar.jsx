@@ -1,216 +1,164 @@
-import Link from "next/link";
+"use client";
+
+import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Sidebar({ type }) {
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const pathname = usePathname();
+
   return (
 
-    <div className="sidebar">
+    <>
 
       {/* ================================================= */}
-      {/* MACHINE LEARNING */}
+      {/* MOBILE BUTTON */}
       {/* ================================================= */}
 
-      {
-        type === "ml" && (
+      <button
+        className="mobile-menu-btn"
+        onClick={() => setIsOpen(true)}
+      >
+        ☰
+      </button>
 
-          <>
+      {/* ================================================= */}
+      {/* OVERLAY */}
+      {/* ================================================= */}
+
+      {isOpen && (
+
+        <div
+          className="sidebar-overlay"
+          onClick={() => setIsOpen(false)}
+        />
+
+      )}
+
+      {/* ================================================= */}
+      {/* SIDEBAR */}
+      {/* ================================================= */}
+
+      <aside
+        className={`sidebar ${isOpen ? "mobile-sidebar-open" : ""}`}
+      >
+
+        {/* ================================================= */}
+        {/* CLOSE BUTTON */}
+        {/* ================================================= */}
+
+        <button
+          className="close-sidebar-btn"
+          onClick={() => setIsOpen(false)}
+        >
+          ✕
+        </button>
+
+        {/* ================================================= */}
+        {/* MACHINE LEARNING */}
+        {/* ================================================= */}
+
+        {type === "ml" && (
+
+          <div className="sidebar-section">
 
             <h2 className="sidebar-title">
               🤖 Machine Learning
             </h2>
 
-            <div className="nav-links">
+            {/* ================================================= */}
+            {/* ML MAIN PAGE */}
+            {/* ================================================= */}
 
-              <Link href="#">
-                📈 Linear Regression
-              </Link>
+            {pathname === "/machine-learning" && (
 
-              <Link href="#">
-                📊 Logistic Regression
-              </Link>
+              <div className="sidebar-links">
 
-              <Link href="#">
-                📍 KNN
-              </Link>
+                <a href="/machine-learning/linear-regression">
+                  📈 Linear Regression
+                </a>
 
-              <Link href="#">
-                🎯 K-Means
-              </Link>
+                <a href="/machine-learning/logistic-regression">
+                  📊 Logistic Regression
+                </a>
 
-              <Link href="#">
-                🌳 Decision Tree
-              </Link>
+                <a href="/machine-learning/knn">
+                  📍 KNN
+                </a>
 
-              <Link href="#">
-                🌲 Random Forest
-              </Link>
+                <a href="/machine-learning/kmeans">
+                  🎯 K-Means
+                </a>
 
-            </div>
+                <a href="/machine-learning/decision-tree">
+                  🌳 Decision Tree
+                </a>
 
-          </>
-        )
-      }
+                <a href="/machine-learning/random-forest">
+                  🌲 Random Forest
+                </a>
 
-      {/* ================================================= */}
-      {/* DEEP LEARNING */}
-      {/* ================================================= */}
+              </div>
 
-      {
-        type === "dl" && (
+            )}
 
-          <>
+            {/* ================================================= */}
+            {/* LINEAR REGRESSION PAGE */}
+            {/* ================================================= */}
 
-            <h2 className="sidebar-title">
-              🧠 Deep Learning
-            </h2>
+            {pathname === "/machine-learning/linear-regression" && (
 
-            <div className="nav-links">
+              <div className="inner-sidebar">
 
-              <Link href="#">
-                ⚡ Perceptron
-              </Link>
+                <h3>
+                  📘 Linear Regression
+                </h3>
 
-              <Link href="#">
-                🧠 Neural Networks
-              </Link>
+                <a href="#overview">
+                  Overview
+                </a>
 
-              <Link href="#">
-                🔄 Backpropagation
-              </Link>
+                <a href="#mathematics">
+                  Mathematics
+                </a>
 
-              <Link href="#">
-                🖼 CNN
-              </Link>
+                <a href="#visualization">
+                  Visualization
+                </a>
 
-              <Link href="#">
-                🔁 RNN
-              </Link>
+                <a href="#manual">
+                  From Scratch
+                </a>
 
-            </div>
+                <a href="#sklearn">
+                  Scikit Learn
+                </a>
 
-          </>
-        )
-      }
+                <a href="#applications">
+                  Applications
+                </a>
 
-      {/* ================================================= */}
-      {/* NLP */}
-      {/* ================================================= */}
+                <a href="#project">
+                  Mini Project
+                </a>
 
-      {
-        type === "nlp" && (
+                <a href="#interview">
+                  Interview Questions
+                </a>
 
-          <>
+              </div>
 
-            <h2 className="sidebar-title">
-              💬 NLP
-            </h2>
+            )}
 
-            <div className="nav-links">
+          </div>
 
-              <Link href="#">
-                ✂ Tokenization
-              </Link>
+        )}
 
-              <Link href="#">
-                📚 TF-IDF
-              </Link>
+      </aside>
 
-              <Link href="#">
-                🧠 Word2Vec
-              </Link>
+    </>
 
-              <Link href="#">
-                🤖 BERT
-              </Link>
-
-            </div>
-
-          </>
-        )
-      }
-
-      {/* ================================================= */}
-      {/* GENERATIVE AI */}
-      {/* ================================================= */}
-
-      {
-        type === "genai" && (
-
-          <>
-
-            <h2 className="sidebar-title">
-              🚀 Generative AI
-            </h2>
-
-            <div className="nav-links">
-
-              <Link href="#">
-                ✍ Prompt Engineering
-              </Link>
-
-              <Link href="#">
-                🤖 LLM
-              </Link>
-
-              <Link href="#">
-                🔍 RAG
-              </Link>
-
-              <Link href="#">
-                🔗 LangChain
-              </Link>
-
-              <Link href="#">
-                🧠 AI Agents
-              </Link>
-
-            </div>
-
-          </>
-        )
-      }
-
-      {/* ================================================= */}
-      {/* DSA */}
-      {/* ================================================= */}
-
-      {
-        type === "dsa" && (
-
-          <>
-
-            <h2 className="sidebar-title">
-              💻 DSA
-            </h2>
-
-            <div className="nav-links">
-
-              <Link href="#">
-                📦 Arrays
-              </Link>
-
-              <Link href="#">
-                🔗 Linked List
-              </Link>
-
-              <Link href="#">
-                📚 Stack
-              </Link>
-
-              <Link href="#">
-                🌲 Trees
-              </Link>
-
-              <Link href="#">
-                🕸 Graph
-              </Link>
-
-            </div>
-
-          </>
-        )
-      }
-
-    </div>
   );
 }
