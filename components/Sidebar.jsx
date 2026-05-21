@@ -13,7 +13,21 @@ export default function Sidebar({ type }) {
 
   const config = getSidebarConfig(type);
 
-  const pageNav = config?.pages?.[pathname];
+  const normalizedPath =
+    pathname?.replace(/\/$/, "") ?? "";
+
+  const pageNav =
+    config?.pages?.[normalizedPath];
+
+  // console.log("SIDEBAR DEBUG");
+
+  // console.log({
+  //   pathname,
+  //   normalizedPath,
+  //   config,
+  //   pageNav,
+  //   pages: config?.pages,
+  // });
 
   const isHub = config && pathname === config.hubPath;
 
