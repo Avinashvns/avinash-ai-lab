@@ -1,10 +1,15 @@
 // app/dsa/page.js
 
 import "./dsa.css";
+import Sidebar from "@/components/Sidebar";
 
 export default function DSAPage() {
   return (
-    <div className="dsa-page">
+    <>
+      <div className="main-container">
+        <Sidebar type="dsa" />
+        <div className="content">
+          <div className="dsa-page">
 
       {/* ================================================= */}
       {/* HERO SECTION */}
@@ -233,6 +238,9 @@ export default function DSAPage() {
 
       </section>
 
-    </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }

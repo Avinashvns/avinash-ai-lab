@@ -1,4 +1,3 @@
-import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
 
 export default function GenerativeAIPage() {
@@ -6,8 +5,6 @@ export default function GenerativeAIPage() {
   return (
 
     <>
-
-      <Header />
 
       <div className="main-container">
 

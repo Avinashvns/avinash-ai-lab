@@ -1,12 +1,8 @@
-import Header from "@/components/Header";
-
 export default function PortfolioPage() {
 
   return (
 
     <>
-
-      <Header />
 
       <div className="content">
 

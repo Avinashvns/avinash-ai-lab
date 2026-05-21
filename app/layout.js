@@ -1,5 +1,6 @@
 import './globals.css'
 import "./responsive.css";
+import Header from "@/components/Header";
 
 export const metadata = {
   title: 'Avinash AI Lab',
@@ -10,6 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <Header />
         {children}
       </body>
     </html>

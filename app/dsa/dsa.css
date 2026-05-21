@@ -5,6 +5,11 @@
   padding: 40px;
 }
 
+/* Inside ML-style layout shell — .content owns outer padding */
+.content .dsa-page {
+  padding: 0;
+}
+
 /* ================================================= */
 /* HERO SECTION */
 /* ================================================= */

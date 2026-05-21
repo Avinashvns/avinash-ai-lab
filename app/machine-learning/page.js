@@ -1,6 +1,5 @@
 import "./machine-learning.css";
 
-import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
 import Card from "@/components/Card";
 
@@ -10,8 +9,6 @@ export default function MachineLearningPage() {
   return (
 
     <>
-
-      <Header />
 
       <div className="main-container">
 

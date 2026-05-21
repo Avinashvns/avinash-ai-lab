@@ -1,12 +1,8 @@
-import Header from "@/components/Header";
-
 export default function ProjectsPage() {
 
   return (
 
     <>
-
-      <Header />
 
       <div className="content">
 
