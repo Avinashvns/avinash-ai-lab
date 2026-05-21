@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { getSidebarConfig } from "@/lib/sidebar-config";
+import "./Sidebar.css";
 
 export default function Sidebar({ type }) {
 
@@ -75,7 +76,39 @@ export default function Sidebar({ type }) {
               {config.title}
             </h2>
 
-            {isHub && (
+            {isHub && config.roadmapPhases?.length > 0 && (
+
+              <div className="sidebar-roadmap">
+
+                {config.roadmapPhases.map((phase) => (
+
+                  <div key={phase.id} className="sidebar-phase">
+
+                    <div className="sidebar-phase-label">
+                      {phase.icon} {phase.label}
+                    </div>
+
+                    <div className="sidebar-links">
+
+                      {phase.topics.map((topic) => (
+
+                        <a key={topic.href} href={topic.href}>
+                          {topic.icon} {topic.label}
+                        </a>
+
+                      ))}
+
+                    </div>
+
+                  </div>
+
+                ))}
+
+              </div>
+
+            )}
+
+            {isHub && !config.roadmapPhases?.length && (
 
               <div className="sidebar-links">
 

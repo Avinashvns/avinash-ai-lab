@@ -1,0 +1,19 @@
+/* DSA topic pages — minimal scaffold */
+
+.dsa-topic-hero {
+  margin-bottom: 60px;
+}
+
+.dsa-topic-section {
+  margin-top: 80px;
+}
+
+.dsa-topic-placeholder {
+  color: #94a3b8;
+  line-height: 1.8;
+  font-size: 18px;
+  padding: 28px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(17, 24, 39, 0.5);
+}

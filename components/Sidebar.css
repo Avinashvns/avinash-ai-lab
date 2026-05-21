@@ -1,0 +1,23 @@
+/* DSA roadmap groups — scoped to Sidebar only */
+
+.sidebar-roadmap {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sidebar-phase-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #94a3b8;
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+
+.sidebar-phase:first-child .sidebar-phase-label {
+  margin-top: 0;
+}
+
+.sidebar-roadmap .sidebar-links {
+  padding-left: 4px;
+}
