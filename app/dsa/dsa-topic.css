@@ -1,19 +1,686 @@
-/* DSA topic pages — minimal scaffold */
+/* ================================================= */
+/* DSA TOPIC PAGE */
+/* ================================================= */
 
-.dsa-topic-hero {
-  margin-bottom: 60px;
+.dsa-topic-hero{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:60px;
+  margin-bottom:100px;
+  padding:50px;
+  border-radius:32px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(59,130,246,0.12),
+      rgba(168,85,247,0.12)
+    );
+  border:1px solid rgba(255,255,255,0.08);
+  position:relative;
+  overflow:hidden;
 }
 
-.dsa-topic-section {
-  margin-top: 80px;
+.dsa-topic-hero::before{
+  content:"";
+  position:absolute;
+  width:400px;
+  height:400px;
+  background:rgba(59,130,246,0.15);
+  filter:blur(120px);
+  top:-120px;
+  right:-100px;
 }
 
-.dsa-topic-placeholder {
-  color: #94a3b8;
-  line-height: 1.8;
-  font-size: 18px;
-  padding: 28px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(17, 24, 39, 0.5);
+.dsa-topic-hero-content{
+  flex:1;
+  position:relative;
+  z-index:2;
+}
+
+.dsa-topic-badge{
+  display:inline-block;
+  padding:10px 18px;
+  border-radius:999px;
+  background:rgba(59,130,246,0.12);
+  border:1px solid rgba(59,130,246,0.3);
+  color:#38bdf8;
+  font-size:14px;
+  font-weight:600;
+  margin-bottom:24px;
+}
+
+.dsa-topic-buttons{
+  display:flex;
+  gap:18px;
+  margin-top:40px;
+  flex-wrap:wrap;
+}
+
+.dsa-primary-btn{
+  padding:14px 28px;
+  border:none;
+  border-radius:16px;
+  background:linear-gradient(
+    135deg,
+    #3b82f6,
+    #8b5cf6
+  );
+  color:white;
+  font-weight:700;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.dsa-primary-btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 30px rgba(59,130,246,0.35);
+}
+
+.dsa-secondary-btn{
+  padding:14px 28px;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,0.1);
+  background:rgba(255,255,255,0.04);
+  color:#e2e8f0;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.dsa-secondary-btn:hover{
+  border-color:#38bdf8;
+  color:#38bdf8;
+}
+
+.dsa-topic-visual{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  position:relative;
+  z-index:2;
+}
+
+.array-visual-card{
+  display:flex;
+  gap:16px;
+  padding:30px;
+  border-radius:28px;
+  background:rgba(15,23,42,0.75);
+  border:1px solid rgba(255,255,255,0.08);
+  backdrop-filter:blur(20px);
+  box-shadow:0 0 40px rgba(59,130,246,0.18);
+}
+
+.array-box{
+  width:70px;
+  height:70px;
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  font-weight:700;
+  color:white;
+  background:linear-gradient(
+    135deg,
+    rgba(59,130,246,0.25),
+    rgba(168,85,247,0.25)
+  );
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+/* ================================================= */
+/* SECTIONS */
+/* ================================================= */
+
+.dsa-topic-section{
+  margin-top:100px;
+}
+
+.dsa-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:28px;
+  margin-top:40px;
+}
+
+.dsa-glass-card{
+  padding:32px;
+  border-radius:28px;
+  background:rgba(15,23,42,0.7);
+  border:1px solid rgba(255,255,255,0.08);
+  backdrop-filter:blur(18px);
+  transition:0.3s;
+}
+
+.dsa-glass-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(59,130,246,0.4);
+  box-shadow:0 10px 35px rgba(59,130,246,0.18);
+}
+
+.dsa-glass-card h3{
+  color:white;
+  margin-bottom:18px;
+  font-size:24px;
+}
+
+.dsa-glass-card p{
+  color:#94a3b8;
+  line-height:1.9;
+  font-size:17px;
+}
+
+/* ================================================= */
+/* MEMORY */
+/* ================================================= */
+
+.memory-blocks{
+  display:flex;
+  gap:14px;
+  margin-top:24px;
+  flex-wrap:wrap;
+}
+
+.memory-cell{
+  width:70px;
+  height:70px;
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  color:white;
+  background:rgba(59,130,246,0.12);
+  border:1px solid rgba(59,130,246,0.25);
+}
+
+/* ================================================= */
+/* STRING VISUAL */
+/* ================================================= */
+
+.string-visual{
+  display:flex;
+  gap:12px;
+  margin-top:24px;
+  flex-wrap:wrap;
+}
+
+.string-visual span{
+  width:60px;
+  height:60px;
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(168,85,247,0.18);
+  border:1px solid rgba(168,85,247,0.35);
+  color:white;
+  font-weight:700;
+}
+
+/* ================================================= */
+/* COMPLEXITY */
+/* ================================================= */
+
+.complexity-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:24px;
+  margin-top:40px;
+}
+
+.complexity-card{
+  padding:34px;
+  border-radius:28px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(59,130,246,0.12),
+      rgba(168,85,247,0.12)
+    );
+  border:1px solid rgba(255,255,255,0.08);
+  text-align:center;
+  transition:0.3s;
+}
+
+.complexity-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 10px 35px rgba(59,130,246,0.18);
+}
+
+.complexity-card h3{
+  color:white;
+  margin-bottom:18px;
+  font-size:24px;
+}
+
+.complexity-card p{
+  font-size:42px;
+  font-weight:800;
+  background:linear-gradient(
+    135deg,
+    #38bdf8,
+    #a855f7
+  );
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* ================================================= */
+/* POINTERS */
+/* ================================================= */
+
+.pointer-visual{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:24px;
+  margin-top:20px;
+  flex-wrap:wrap;
+}
+
+.pointer-array{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.pointer-array span{
+  width:60px;
+  height:60px;
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(59,130,246,0.12);
+  border:1px solid rgba(59,130,246,0.25);
+  color:white;
+  font-weight:700;
+}
+
+.left-pointer,
+.right-pointer{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(
+    135deg,
+    #3b82f6,
+    #8b5cf6
+  );
+  color:white;
+  font-weight:800;
+  font-size:20px;
+}
+
+/* ================================================= */
+/* PRACTICE */
+/* ================================================= */
+
+.practice-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:24px;
+  margin-top:40px;
+}
+
+.practice-card{
+  padding:32px;
+  border-radius:24px;
+  text-align:center;
+  font-size:24px;
+  font-weight:700;
+  color:white;
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+.practice-card.easy{
+  background:rgba(34,197,94,0.12);
+}
+
+.practice-card.medium{
+  background:rgba(234,179,8,0.12);
+}
+
+.practice-card.hard{
+  background:rgba(239,68,68,0.12);
+}
+
+/* ================================================= */
+/* CTA */
+/* ================================================= */
+
+.dsa-topic-cta{
+  margin-top:120px;
+  padding:50px;
+  border-radius:32px;
+  text-align:center;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(59,130,246,0.12),
+      rgba(168,85,247,0.12)
+    );
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+.dsa-topic-cta h2{
+  font-size:42px;
+  margin-bottom:20px;
+  color:white;
+}
+
+.dsa-topic-cta p{
+  color:#94a3b8;
+  font-size:18px;
+  line-height:1.8;
+}
+
+/* ================================================= */
+/* RESPONSIVE */
+/* ================================================= */
+
+@media(max-width:1100px){
+
+  .dsa-topic-hero{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .dsa-topic-buttons{
+    justify-content:center;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .dsa-topic-hero{
+    padding:30px;
+  }
+
+  .array-box{
+    width:55px;
+    height:55px;
+  }
+
+  .dsa-topic-cta h2{
+    font-size:32px;
+  }
+
+}
+
+@media(max-width:500px){
+
+  .dsa-primary-btn,
+  .dsa-secondary-btn{
+    width:100%;
+  }
+
+  .array-visual-card{
+    gap:10px;
+    padding:20px;
+  }
+
+  .array-box{
+    width:45px;
+    height:45px;
+    font-size:18px;
+  }
+
+}
+
+
+
+/* ================================================= */
+/* LEARNING FLOW */
+/* ================================================= */
+
+.dsa-learning-flow-box{
+  padding:40px;
+  border-radius:32px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(15,23,42,0.92),
+      rgba(30,41,59,0.82)
+    );
+  border:1px solid rgba(255,255,255,0.08);
+  position:relative;
+  overflow:hidden;
+}
+
+.dsa-learning-flow-box::before{
+  content:"";
+  position:absolute;
+  width:320px;
+  height:320px;
+  background:rgba(59,130,246,0.10);
+  filter:blur(100px);
+  top:-120px;
+  right:-100px;
+}
+
+.dsa-learning-flow-header{
+  position:relative;
+  z-index:2;
+  max-width:850px;
+}
+
+.dsa-learning-mini-badge{
+  display:inline-block;
+  padding:10px 18px;
+  border-radius:999px;
+  background:rgba(59,130,246,0.12);
+  border:1px solid rgba(59,130,246,0.28);
+  color:#38bdf8;
+  font-size:14px;
+  font-weight:700;
+  margin-bottom:24px;
+}
+
+.dsa-learning-flow-title{
+  font-family:var(--font-display);
+  font-size:52px;
+  font-weight:800;
+  line-height:1.15;
+  color:white;
+}
+
+.dsa-learning-flow-text{
+  max-width:720px;
+  margin-top:24px;
+  color:#94a3b8;
+  line-height:1.9;
+  font-size:18px;
+}
+
+.dsa-learning-flow-steps{
+  margin-top:50px;
+  display:flex;
+  align-items:center;
+  gap:18px;
+  flex-wrap:wrap;
+  position:relative;
+  z-index:2;
+}
+
+.dsa-flow-card{
+  padding:18px 28px;
+  border-radius:20px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(59,130,246,0.16),
+      rgba(168,85,247,0.16)
+    );
+  border:1px solid rgba(255,255,255,0.08);
+  color:white;
+  font-weight:700;
+  transition:0.3s;
+}
+
+.dsa-flow-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(59,130,246,0.35);
+  box-shadow:
+    0 10px 30px rgba(59,130,246,0.16);
+}
+
+.dsa-flow-arrow{
+  font-size:28px;
+  color:#38bdf8;
+  font-weight:700;
+}
+
+/* ================================================= */
+/* RESPONSIVE */
+/* ================================================= */
+
+@media(max-width:768px){
+
+  .dsa-learning-flow-box{
+    padding:28px;
+  }
+
+  .dsa-learning-flow-title{
+    font-size:36px;
+  }
+
+  .dsa-learning-flow-steps{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .dsa-flow-arrow{
+    transform:rotate(90deg);
+  }
+
+}
+
+/* ================================================= */
+/* ROADMAP HEADER */
+/* ================================================= */
+
+.dsa-roadmap-header{
+  margin-bottom:60px;
+  max-width:900px;
+}
+
+.dsa-roadmap-badge{
+  display:inline-block;
+  padding:10px 18px;
+  border-radius:999px;
+  background:rgba(59,130,246,0.12);
+  border:1px solid rgba(59,130,246,0.28);
+  color:#38bdf8;
+  font-size:14px;
+  font-weight:700;
+  margin-bottom:26px;
+}
+
+.dsa-roadmap-title{
+  font-family:var(--font-display);
+  font-size:52px;
+  font-weight:800;
+  line-height:1.15;
+  color:white;
+  margin-top:18px;
+}
+
+.dsa-roadmap-text{
+  max-width:720px;
+  margin-top:24px;
+  color:#94a3b8;
+  line-height:1.9;
+  font-size:18px;
+}
+
+/* ================================================= */
+/* ROADMAP GRID */
+/* ================================================= */
+
+.dsa-roadmap-grid{
+  display:grid;
+  grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+  gap:28px;
+  margin-top:50px;
+}
+
+.dsa-roadmap-card{
+  padding:32px;
+  border-radius:28px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(15,23,42,0.92),
+      rgba(30,41,59,0.82)
+    );
+  border:1px solid rgba(255,255,255,0.08);
+  text-decoration:none;
+  transition:0.35s;
+  position:relative;
+  overflow:hidden;
+}
+
+.dsa-roadmap-card::before{
+  content:"";
+  position:absolute;
+  width:250px;
+  height:250px;
+  background:rgba(59,130,246,0.12);
+  filter:blur(100px);
+  top:-120px;
+  right:-100px;
+}
+
+.dsa-roadmap-card:hover{
+  transform:translateY(-8px);
+  border-color:rgba(59,130,246,0.35);
+  box-shadow:
+    0 15px 40px rgba(59,130,246,0.18);
+}
+
+.roadmap-icon{
+  font-size:42px;
+  display:block;
+  margin-bottom:22px;
+  position:relative;
+  z-index:2;
+}
+
+.dsa-roadmap-card h3{
+  font-size:28px;
+  color:white;
+  margin-bottom:18px;
+  position:relative;
+  z-index:2;
+}
+
+.dsa-roadmap-card p{
+  color:#94a3b8;
+  line-height:1.9;
+  position:relative;
+  z-index:2;
+}
+
+/* ================================================= */
+/* RESPONSIVE */
+/* ================================================= */
+
+@media(max-width:768px){
+
+  .dsa-roadmap-title{
+    font-size:36px;
+  }
+
+  .dsa-roadmap-grid{
+    grid-template-columns:1fr;
+  }
+
 }
