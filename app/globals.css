@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+  --font-body: 'Inter', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
 }
 
 body {
@@ -154,6 +160,8 @@ body {
 }
 
 .sidebar-title{
+
+  font-family:var(--font-display);
 
   font-size:28px;
 
@@ -452,6 +460,8 @@ body {
 
 .main-title {
 
+  font-family:var(--font-display);
+
   font-size: 82px;
 
   line-height: 1;
@@ -576,6 +586,8 @@ body {
 /* ===================================================== */
 
 .page-title {
+
+  font-family:var(--font-display);
 
   font-size: 62px;
 
@@ -715,6 +727,7 @@ body {
 }
 
 .section-header h2 {
+  font-family:var(--font-display);
   font-size: 42px;
   margin-bottom: 12px;
 }
