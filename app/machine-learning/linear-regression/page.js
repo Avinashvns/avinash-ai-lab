@@ -83,6 +83,101 @@ export default function LinearRegressionPage() {
 
           </div>
 
+          {/* ================================================= */}
+          {/* MATHEMATICS */}
+          {/* ================================================= */}
+
+          <div
+            className="lr-section"
+            id="mathematics"
+          >
+
+            <div className="section-header">
+
+              <h2>
+                📐 Mathematics Behind Linear Regression
+              </h2>
+
+              <p>
+                Linear Regression tries to find the best fit line.
+              </p>
+
+            </div>
+
+            <div className="math-card">
+
+  <div className="math-left">
+
+    <div className="formula-box">
+
+      <h1>
+        y = mx + c
+      </h1>
+
+    </div>
+
+    <div className="formula-info">
+
+      <div className="formula-item">
+
+        <span>y</span>
+
+        <p>
+          Predicted Output
+        </p>
+
+      </div>
+
+      <div className="formula-item">
+
+        <span>m</span>
+
+        <p>
+          Slope of Line
+        </p>
+
+      </div>
+
+      <div className="formula-item">
+
+        <span>x</span>
+
+        <p>
+          Input Feature
+        </p>
+
+      </div>
+
+      <div className="formula-item">
+
+        <span>c</span>
+
+        <p>
+          Intercept
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div className="math-right">
+
+    <img
+      src="/images/machine-learning/linear-regression/lr-math.png"
+      alt="Linear Regression Mathematics"
+      className="math-image"
+    />
+
+  </div>
+
+</div>
+
+          </div>
+
+          {/* End */}
+
         </div>
 
       </div>

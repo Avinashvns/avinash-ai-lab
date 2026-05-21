@@ -11,22 +11,6 @@ export default function MachineLearningPage() {
 
     <>
 
-      {/* <Header />
-
-      <div className="main-container">
-
-        <Sidebar type="ml" />
-
-        <div className="content">
-
-          <h1 className="page-title">
-            🤖 Machine Learning
-          </h1>
-
-        </div>
-
-      </div> */}
-
       <Header />
 
       <div className="main-container">
